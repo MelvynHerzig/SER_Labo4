@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Référencement du document XSLT -->
+<!-- Référencement du document XSLT pour la mise en forme -->
 <?xml-stylesheet href="pokedex.xsl" type="text/xsl" ?>
 
 <pokedex>

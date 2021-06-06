@@ -57,8 +57,8 @@
 					                               Le but est de récupérer les types de pokemon en parcourant tous les enfants <type> de tous les pokemons,
 					                               mais sans avoir de doublons à la fin, vous ne pouvez pas mettre explicitement ici les types que vous trouver dans le fichier XML
                                                    Conseil : Cherchez une astuce sur internet ! -->
-						<!-- Récupération des types (/pokedex//type) tel qu'aucun type précédent ne valle le type courrant -->
-						<xsl:variable name="types" select="//type[not(preceding::*=.)]" /> 
+						<!-- Récupération des types //type tel qu'aucun type précédent ne valle le type courrant -->
+						<xsl:variable name="types" select="//type[not(text()=preceding::type)]" /> 
 
 						<xsl:for-each select="$types">
 
@@ -114,8 +114,6 @@
 
 					$("[role=pokemon]").hide(1000);
 					$("[role=pokemon][generation=" + generation + "]").show(1000);
-
-
 
 				});
 			</script>
